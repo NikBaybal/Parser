@@ -45,8 +45,9 @@ flat_type=['112 серия',
 
 
 df['Type'] = df['Desc'].str.split(",")
-df['Type2'] = df['Type'].apply(lambda x: x if x in flat_type else None)
-print(df.head())
+#df['Type2'] = df['Type'].apply(lambda x: x if x in flat_type else None)
+#df['Type2']=df['Type'].find(flat_type)
+print(df['Type'].find(flat_type))
 
 
 
